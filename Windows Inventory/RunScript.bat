@@ -1,1 +1,1 @@
-powershell -noexit -executionpolicy Bypass ".\invScript.ps1 > out.txt"
+powershell -executionpolicy Bypass ".\invScript.ps1 > baseOut.txt"
