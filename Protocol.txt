@@ -1,0 +1,40 @@
+Physical Protocol:
+	Take a full inventory of equipment in the room
+	Ensure there is no line of sight to any of the PC screens
+
+Linux Protocol:
+   Run scan script and save it to a file to be referenced later (Run "InventoryScanUbuntu.sh")
+   Investigate results of the scan to determine if everything present is up to par (Disable unnecessary services, check users, permissions, etc.)
+	 Disable ICMP, SSH, Telnet, NetBIOS, RDP , etc. unless this service is scored (Check the scoreboard/scorebot)
+   Set service scan task to run script run every 10 mins (Have script setup to monitor changes)
+   Change static IP on your machine
+   Install Kaspersky on your machine
+   Run a quick scan
+   Change passwords
+   Monitor user and service accounts
+   Run full Kaspersky scan and wait for completion to continue
+   Begin creating virtual disks of ALL hosts and send them to Hyper-V MGR (SCP or better transfer method)
+   Start Injects
+
+Windows Protocol:
+   Run scan script and save it to a file to be referenced later (Run "Run Script.bat")
+   Investigate results of the scan to determine if everything present is up to par (Disable unnecessary services, check users, permissions, etc.)
+	 Disable ICMP, SSH, Telnet, NetBIOS, RDP , etc. unless this service is scored (Check the scoreboard/scorebot)
+   Set service scan task to run script run every 10 mins (Have script setup to monitor changes)
+   Change static IP on your machine ([Server AD] - DHCP release all machines)
+   Install Kaspersky on your machine
+   Run a quick scan
+   Change passwords with virtual keyboard
+   Setup group with GPO to limit access to system services for orange team
+   Monitor user accounts on AD
+   Run full Kaspersky scan and wait for completion to continue
+   Begin creating virtual disks of ALL hosts and send them to Hyper-V MGR (SCP or better transfer method)
+   Use Bitlocker or other Full Disk Encryption Programs to fully encrypt your hard disk
+   Use server backup role and backup to another location on the network (Create base full server backup, then a state backup to another location)
+   Start Injects
+
+Firewall Protocol:
+	Enable Wildfire and Pan-DB (if possible)
+	Ensure DMZ is blocked
+	Ensure AD does not have internet
+	Ensure Hyper-V does not have internet
