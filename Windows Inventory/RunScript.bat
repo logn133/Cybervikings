@@ -1,1 +1,0 @@
-powershell -executionpolicy Bypass ".\invScript.ps1 > baseOut.txt"
